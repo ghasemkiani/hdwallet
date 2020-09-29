@@ -1,0 +1,31 @@
+{
+  "name": "@ghasemkiani/hdwallet",
+  "version": "1.0.0",
+  "description": "HD wallet key derivation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/ghasemkiani/hdwallet.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "cryptography",
+    "cryptocurrency",
+    "hdwallet"
+  ],
+  "author": "Ghasem Kiani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/ghasemkiani/hdwallet/issues"
+  },
+  "homepage": "https://gitlab.com/ghasemkiani/hdwallet#readme",
+  "dependencies": {
+    "@ghasemkiani/commonbase": "github:ghasemkiani/commonbase",
+    "bip32": "^2.0.6",
+    "bip39": "^3.0.2"
+  }
+}
