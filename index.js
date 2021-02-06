@@ -20,7 +20,13 @@ class HDWallet extends Base {
 		let password = "";
 		let seed = bip39.mnemonicToSeedSync(mnemonic, password);
 		let master = bip32.fromSeed(seed);
-		let child = master.derivePath(hdpath + cutil.asString(index));
+		if(cutil.isNumber(index)) {
+			if(!/\/$/.test(hdpath)) {
+				hdpath += "/";
+			}
+			hdpath += cutil.asString(index);
+		}
+		let child = master.derivePath(hdpath);
 		return child.privateKey.toString("hex");
 	}
 }
@@ -46,6 +52,8 @@ cutil.extend(HDWallet.prototype, {
 	HDPATH_ATOMICWALLET_KIN: "m/44'/148'/0'/", // ****** added slash at the end
 	HDPATH_ATOMICWALLET_LSK: "m/44'/134'/0'/0/",
 	HDPATH_ATOMICWALLET_LTC: "m/44'/60'/0'/0/",
+	HDPATH_METAMASK_ETH: "m/44'/60'/0'/0/",
+	HDPATH_METAMASK_BSC: "m/44'/60'/0'/0/",
 	HDPATH_ATOMICWALLET_NEO: "m/44'/888'/0'/",
 	HDPATH_ATOMICWALLET_ONG: "m/44'/1024'/0'/0/",
 	HDPATH_ATOMICWALLET_QTUM: "m/44'/2301'/0'/0/",
@@ -59,8 +67,11 @@ cutil.extend(HDWallet.prototype, {
 	HDPATH_ATOMICWALLET_XRP: "m/44'/144'/0'/0/",
 	HDPATH_ATOMICWALLET_XTZ: "m/44'/1729'/0'/0/",
 	HDPATH_ATOMICWALLET_ZEC: "m/44'/133'/0'/0/",
+	HDPATH_TOMOCHAIN: "m/44'/889'/0'/0/",
 });
 
 module.exports = {HDWallet};
 
 // https://support.atomicwallet.io/article/146-list-of-derivation-paths
+// @binance-chain/javascript-sdk/lib/crypto/index.js
+// https://github.com/satoshilabs/slips/blob/master/slip-0044.md
