@@ -59,7 +59,7 @@ cutil.extend(HDWallet.prototype, {
 	HDPATH_ATOMICWALLET_QTUM: "m/44'/2301'/0'/0/",
 	HDPATH_ATOMICWALLET_SMART: "m/44'/224'/0'/0/",
 	HDPATH_ATOMICWALLET_TPAY: "m/44'/265'/0'/", // ****** added slash at the end
-	HDPATH_ATOMICWALLET_TRX: "m/44'/195'/0'/", // ****** added slash at the end
+	HDPATH_ATOMICWALLET_TRX: "m/44'/195'/0'", // ****** use with index null
 	HDPATH_ATOMICWALLET_VET: "m/44'/818'/0'/0/",
 	HDPATH_ATOMICWALLET_WAVES: "m/44'/5741564'/0'/0/",
 	HDPATH_ATOMICWALLET_XEM: "m/44'/43'/0'/0/",
