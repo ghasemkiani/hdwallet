@@ -3,8 +3,8 @@
 const bip32 = require("bip32");
 const bip39 = require("bip39");
 
-const {cutil} = require("@ghasemkiani/commonbase/cutil");
-const {Base} = require("@ghasemkiani/commonbase/base");
+const {cutil} = require("@ghasemkiani/base/cutil");
+const {Obj: Base} = require("@ghasemkiani/base/obj");
 
 class HDWallet extends Base {
 	generateMnemonic(mnemonicLen = 256) {
