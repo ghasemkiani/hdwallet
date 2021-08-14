@@ -1,12 +1,12 @@
 //	@ghasemkiani/hdwallet
 
-const bip32 = require("bip32");
-const bip39 = require("bip39");
+import bip32 from "bip32";
+import bip39 from "bip39";
 
-const {cutil} = require("@ghasemkiani/base/cutil");
-const {Obj: Base} = require("@ghasemkiani/base/obj");
+import {cutil} from "@ghasemkiani/base";
+import {Obj} from "@ghasemkiani/base";
 
-class HDWallet extends Base {
+class HDWallet extends Obj {
 	generateMnemonic(mnemonicLen = 256) {
 	  return bip39.generateMnemonic(mnemonicLen);
 	}
@@ -70,7 +70,7 @@ cutil.extend(HDWallet.prototype, {
 	HDPATH_TOMOCHAIN: "m/44'/889'/0'/0/",
 });
 
-module.exports = {HDWallet};
+export {HDWallet};
 
 // https://support.atomicwallet.io/article/146-list-of-derivation-paths
 // @binance-chain/javascript-sdk/lib/crypto/index.js
