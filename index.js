@@ -13,7 +13,7 @@ class HDWallet extends Obj {
 	validateMnemonic(mnemonic) {
 		return bip39.validateMnemonic(mnemonic);
 	}
-	getPrivateKeyFromMnemonic(mnemonic, hdpath = "44'/714'/0'/0/", index = 0) {
+	getPrivateKeyFromMnemonic(mnemonic, hdpath = "m/44'/714'/0'/0/", index = 0) {
 		if(!this.validateMnemonic(mnemonic)) {
 			throw new Error("wrong mnemonic format");
 		}
@@ -33,7 +33,8 @@ class HDWallet extends Obj {
 cutil.extend(HDWallet.prototype, {
 	mnemonic: null,
 	privateKey: null,
-	HDPATH_BINANCE_CHAIN: "44'/714'/0'/0/",
+	HDPATH_TRUSTWALLET_BTC: "m/84'/0'/0'/0/",
+	HDPATH_BINANCE_CHAIN: "m/44'/714'/0'/0/",
 	HDPATH_ATOMICWALLET_ADA: "m/44'/1815'/0'/0/",
 	HDPATH_ATOMICWALLET_ATOM: "m/44'/118'/0'/0/",
 	HDPATH_ATOMICWALLET_BCD: "m/44'/999'/0'/0/",
