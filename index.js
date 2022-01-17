@@ -34,6 +34,7 @@ cutil.extend(HDWallet.prototype, {
 	mnemonic: null,
 	privateKey: null,
 	HDPATH_TRUSTWALLET_BTC: "m/84'/0'/0'/0/",
+	HDPATH_TRUSTWALLET_LTC: "m/84'/2'/0'/0/",
 	HDPATH_BINANCE_CHAIN: "m/44'/714'/0'/0/",
 	HDPATH_ATOMICWALLET_ADA: "m/44'/1815'/0'/0/",
 	HDPATH_ATOMICWALLET_ATOM: "m/44'/118'/0'/0/",
@@ -76,3 +77,4 @@ export {HDWallet};
 // https://support.atomicwallet.io/article/146-list-of-derivation-paths
 // @binance-chain/javascript-sdk/lib/crypto/index.js
 // https://github.com/satoshilabs/slips/blob/master/slip-0044.md
+// https://btcrecover.readthedocs.io/en/latest/bip39-accounts-and-altcoins/
