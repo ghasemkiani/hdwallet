@@ -70,6 +70,7 @@ cutil.extend(HDWallet.prototype, {
 	HDPATH_ATOMICWALLET_XTZ: "m/44'/1729'/0'/0/",
 	HDPATH_ATOMICWALLET_ZEC: "m/44'/133'/0'/0/",
 	HDPATH_TOMOCHAIN: "m/44'/889'/0'/0/",
+	HDPATH_THORCHAIN: "m/44'/931'/0'/0/",
 });
 
 export {HDWallet};
