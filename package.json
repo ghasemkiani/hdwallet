@@ -1,6 +1,6 @@
 {
 	"name": "@ghasemkiani/hdwallet",
-	"version": "2.2.1",
+	"version": "2.2.2",
 	"description": "HD wallet key derivation",
 	"type": "module",
 	"main": "index.js",
