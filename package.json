@@ -1,32 +1,33 @@
 {
-	"name": "@ghasemkiani/hdwallet",
-	"version": "2.2.2",
-	"description": "HD wallet key derivation",
-	"type": "module",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/ghasemkiani/hdwallet.git"
-	},
-	"keywords": [
-		"javascript",
-		"nodejs",
-		"cryptography",
-		"cryptocurrency",
-		"hdwallet"
-	],
-	"author": "Ghasem Kiani",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/ghasemkiani/hdwallet/issues"
-	},
-	"homepage": "https://github.com/ghasemkiani/hdwallet#readme",
-	"dependencies": {
-		"@ghasemkiani/base": "github:ghasemkiani/base",
-		"bip32": "^4.0.0",
-		"bip39": "^3.1.0"
-	}
+  "name": "@ghasemkiani/hdwallet",
+  "version": "2.2.3",
+  "description": "HD wallet key derivation",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghasemkiani/hdwallet.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "cryptography",
+    "cryptocurrency",
+    "hdwallet"
+  ],
+  "author": "Ghasem Kiani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ghasemkiani/hdwallet/issues"
+  },
+  "homepage": "https://github.com/ghasemkiani/hdwallet#readme",
+  "dependencies": {
+    "@ghasemkiani/base": "github:ghasemkiani/base",
+    "bip32": "^4.0.0",
+    "bip39": "^3.1.0",
+    "tiny-secp256k1": "^2.2.4"
+  }
 }

@@ -1,5 +1,8 @@
-import bip32 from "bip32";
+import { BIP32Factory } from "bip32";
+import * as ecc from "tiny-secp256k1";
 import bip39 from "bip39";
+
+const bip32 = BIP32Factory(ecc);
 
 import {cutil} from "@ghasemkiani/base";
 import {Obj} from "@ghasemkiani/base";
